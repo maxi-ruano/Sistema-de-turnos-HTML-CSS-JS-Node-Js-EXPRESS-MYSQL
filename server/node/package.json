@@ -9,8 +9,12 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
+    "ejs": "^3.1.9",
     "express": "4.17.1",
-    "mercadopago": "^1.5.8"
+    "jsonwebtoken": "^9.0.2",
+    "mercadopago": "^1.5.8",
+    "node-cron": "^3.0.2",
+    "nodemailer": "^6.9.6"
   },
   "devDependencies": {
     "nodemon": "^2.0.13"

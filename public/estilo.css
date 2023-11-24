@@ -1,0 +1,28 @@
+.background{
+
+    background-color:green;
+    /* background-image: url("https://wallpaperaccess.com/full/784181.jpg"); */
+}
+
+.form{
+
+    margin-right: 70px;
+}
+.selected-date::-webkit-calendar-picker-indicator::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.3;
+  }
+ 
+  
+  
+  .fecha-ocupada{
+    color: red;
+  }
+  
+  

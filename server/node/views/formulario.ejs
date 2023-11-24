@@ -1,0 +1,16 @@
+<html>
+<head>
+  <title>Formulario de horarios</title>
+</head>
+<body>
+  <h1>Selecciona un horario:</h1>
+  <form>
+    <select>
+      <% for (let i = 0; i < horarios.length; i++) { %>
+        <option><%= horarios[i] %></option>
+      <% } %>
+    </select>
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>

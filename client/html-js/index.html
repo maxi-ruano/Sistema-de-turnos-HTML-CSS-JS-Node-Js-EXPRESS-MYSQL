@@ -1,114 +1,831 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Template Code - Checkout Pro</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/index.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://sdk.mercadopago.com/js/v2"></script>
-  <script type="text/javascript" src="js/index.js" defer></script>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Gp Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+<script src="https://sdk.mercadopago.com/js/v2"></script>
+<script type="text/javascript" src="js/index.js" defer></script>
+<script src="https://sdk.mercadopago.com/js/v2"></script>
+
+
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
+  <script src="js/bootstrap-datepicker.js"></script>
+  
+  <!-- Vendor CSS Files -->
+  <!-- <link href="aos.css" rel="stylesheet"> -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="/bootstrap-icons.css" rel="stylesheet">
+  <!-- <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet"> -->
+  <link href="css/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="css/style.css" rel="stylesheet">
+ 
+
+  <!-- =======================================================
+  * Template Name: Gp - v4.10.0
+  * Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
 </head>
 
 <body>
-  <main>
-    <!-- Shopping Cart -->
-    <section class="shopping-cart dark">
-      <div class="container" id="container">
-        <div class="block-heading">
-          <h2>Shopping Cart</h2>
-          <p>This is an example of Checkout Pro integration of Mercado Pago</p>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-lg-between">
+
+      <h1 class="logo me-auto me-lg-0"><a href="/">MCG<span>.</span></a></h1>
+     
+      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#services">Turnos</a></li> -->
+          <!-- <li><a class="nav-link scrollto " href="#portfolio">Contact</a></li> -->
+          <li><a class="nav-link scrollto" href="#contactus">Contact us</a></li>
+         
+            <ul>
+              
+                <ul>
+                
+                </ul>
+              </li>
+              
+             
+            </ul>
+          </li>
+         
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <a href="#about" class="get-started-btn scrollto"> Start</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center justify-content-center">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+        <div class="col-xl-6 col-lg-8" id="First-Section">
+          <h1>Medical Center Group<span>.</span></h1>
+          <h2>The Future of the Private Medical</h2>
         </div>
-        <div class="content">
-          <div class="row">
-            <div class="col-md-12 col-lg-8">
-              <div class="items">
-                <div class="product">
-                  <div class="info">
-                    <div class="product-details">
-                      <div class="row justify-content-md-center">
-                        <div class="col-md-3">
-                          <img class="img-fluid mx-auto d-block image" alt="Image of a product" src="img/product.png">
-                        </div>
-                        <div class="col-md-4 product-detail">
-                          <h5>Product</h5>
-                          <br class="product-info">
-                          <br>
-                          <b>Description: </b><span id="product-description">Some book</span><br>
-                          <b>Author: </b>Dale Carnegie<br>
-                          <b>Number of pages: </b>336<br>
-                          <b>Price:</b> $ <span id="unit-price">10</span>
-                        </div>
+      </div>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="img/g.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
+            <h3>The Beginnings</h3>
+            <br>
+            <p class="fst-italic">
+              We were born in 1989 with the construction of the MCG Center ,  the group's first investment and the initial link for successive undertakings that positioned us as one of the leading organizations in this activity.
+              This was followed by the creation of our own prepaid medicine in 1994: Medical Center Group , which has since become one of the most important health service companies in Argentina, providing coverage to more than 950,000 associates.
+              
+              Later, the Group entered the insurance market through the acquisition of 100% of St. Paul Argentina, a company that stands out in the national and international market for its exceptional solvency level. This is how Medical Group Insurance was born.
+              
+              We are one of the main groups in Argentina dedicated to the protection of people, made up of 8 clinics, 12 outpatient medical centers, ECCO Emergency and Prevention, SMG Cells, SMG Seguros, SMG LIFE, the Salta Institute, SMG ART, the Swiss Medical Foundation and Blue Cross & Blue Shield in Uruguay.
+
+              We were born in 1989 with the construction of the MCG Center ,  the group's first investment and the initial link for successive undertakings that positioned us as one of the leading organizations in this activity.
+              This was followed by the creation of our own prepaid medicine in 1994: Medical Center Group , which has since become one of the most important health service companies in Argentina, providing coverage to more than 950,000 associates.
+              
+              Later, the Group entered the insurance market through the acquisition of 100% of St. Paul Argentina, a company that stands out in the national and international market for its exceptional solvency level. This is how Medical Group Insurance was born.
+              
+              We are one of the main groups in Argentina dedicated to the protection of people, made up of 8 clinics, 12 outpatient medical centers, ECCO Emergency and Prevention, SMG Cells, SMG Seguros, SMG LIFE, the Salta Institute, SMG ART, the Swiss Medical Foundation and Blue Cross & Blue Shield in Uruguay.
+            </p>
+    
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Clients Section ======= -->
+     <section id="clients" class="clients">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="clients-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="img/client-1.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="img/client-2.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="img/client-3.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="img/client-4.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="img/client-5.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="img/client-6.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="img/client-7.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="img/client-8.png" class="img-fluid" alt=""></div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======= Features Section ======= -->
+    <hr>
+    <br><br><br>
+    <section id="features" class="features">
+      <div class="container" data-aos="fade-up">
+      
+        
+        <div class="row">
+          <div class="image col-lg-6" style='background-image: url("img/h.jpg");' data-aos="fade-right"></div>
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+            <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
+              <i class="bx bx-receipt"></i>
+              
+              <div class="zoom">
+                
+              <h4>Cardiology</h4>
+              <h4>Hematology</h4>
+              <h4>Traumatology</h4>
+              <h4>Pediatrics</h4>
+              <h4>Teeth Whitening</h4>
+              <h4>Cardiovascular Surgery</h4>
+              <h4>General Surgery</h4>
+              <h4>Gynecology</h4>
+              <h4>Nutrition</h4>
+              <h4>Hair Implant</h4>
+              <h4>Endocrinology</h4>
+              <h4>Infectology</h4>
+            </div>
+            </div>
+           
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Features Section -->
+
+   
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="text-center" id="information">
+          <h3>Information 24 hs</h3>
+          <br><br>
+          <p class="tel"> 0810-444-MCG</p>
+          <br><br>
+          <p class="tel-2">+54 9 11 5051 MCG</p>
+          <br>
+          <!-- <a class="cta-btn" href="#">Logo Wasap</a> -->
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+
+    
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contactus" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Contact Us</p>
+        </div>
+
+        <div>
+          <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.753181556603!2d-58.41725068628716!3d-34.61040228045769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaf5b0e0848b%3A0x1c04f76cc175351b!2sAv.%20Rivadavia%203443%2C%20C1203AAG%20CABA!5e0!3m2!1sen!2sar!4v1677770341432!5m2!1sen!2sar" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Principal Center:</h4>
+                <p>Av Rivadavia xxxx C.A.B.A</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>mdc@gmail.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>0810-666-Medical-Center-Group</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+        <div >
+          <h1 class="titulo">Book Your Turn :</h1>
+        </div>
+         
+            <br><br>
+
+            <!-- <form class="form" action="/insertar" method="POST" id="miFormulario"> -->
+              <form class="form" id="miFormulario">
+                <div class="overflow-hidden shadow sm:rounded-md">
+                  <div class="bg-white px-4 py-5 sm:p-6">
+                    <div class="grid grid-cols-6 gap-6">
+                      <!-- <div class="col-span-6 sm:col-span-3">
+                        <label for="name" >First name</label>
+                        <input required type="text" name="name" id="name" autocomplete="given-name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm ">
+                      </div> -->
+                      <div class="col-span-6 sm:col-span-3">
+                        <label for="last-name">First Name</label>
+                        <input required type="text" name="name" id="name" autocomplete="family-name" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 lg:text-lg form-input">
                       </div>
-                      <div class="col-md-3 product-detail">
-                        <label for="quantity">
-                          <b>Quantity</b>
-                        </label>
-                        <input type="number" id="quantity" value="1" min="1" class="form-control">
+              
+
+
+
+                      <div class="col-span-6 sm:col-span-3">
+                        <label for="last-name">Last name</label>
+                        <input required type="text" name="last-name" id="last-name" autocomplete="family-name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm form-input">
                       </div>
+              
+
+                      <div class="col-span-6 sm:col-span-3 " >
+                        <label for="email">Email</label>
+                        <input required type="email" name="email" id="email" autocomplete="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm form-input">
+                      </div>
+
+                      <div class="col-span-6 sm:col-span-3">
+                        <label for="specialty">Specialty</label>
+                        <select required name="specialty" id="specialty" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                          <option value="">Select a specialty</option>
+                          <option value="neurologia">Neurology</option>
+                          <option value="nutricionista">Nutritionist</option>
+                          <option value="traumatologia">traumatology</option>
+                          <!-- Agrega más opciones según tus necesidades -->
+                        </select>
+                      </div>
+              
+                      <div class="input-group date fj-date">
+                        <label for="date">Date</label>
+                        <input type="text" name="time" id="time" class="form-control datepicker">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                      </div>
+              
+                      <div class="col-span-6 sm:col-span-3">
+                        <label for="hour">Hour</label>
+                        <input required type="text" name="hour" id="hour" autocomplete="family-name" class=" form-input"
+                          onfocus="showHourOptions()">
+                      </div>
+                     
+                      <br>
+                      <div class="col-span-6 sm:col-span-4">
+                        <button type="submit" id="submit">Send</button>
+                      </div> 
                     </div>
                   </div>
                 </div>
+              </form>
+
+
+
+           
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+
+
+
+    <section id="pricing" class="pricing full-width-section " >
+      <div class="container">
+  
+        <div class="section-title">
+          <h2>MCG GROUP Plans</h2>
+          <br>
+          <p>Our plans</p>
+        </div>
+  
+        <div class="row">
+  
+        
+  
+          <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
+            <div class="box recommended">
+              <span class="recommended-badge">Standard</span>
+              <h3> <span id="product-description">Plan 1000</span></h3>
+              <h4><span id="unit-price">1000</span></h4>
+              <h3><span id="quantity"> 1</span> <span> person</span></h3>
+  
+              <ul>
+                <li>Extensive List of Providers.</li>
+                <li>Coverage throughout the country.</li>
+                <li>Medications and Contraceptives without formulary </li>
+                <li>100% Orthodontic Coverage </li>
+                <!-- <li class="na">Massa ultricies mi</li> -->
+              </ul>
+              <div class="btn-wrap">
+                <button id="checkout-btn">Pay</button>
+  
               </div>
             </div>
           </div>
-          <div class="col-md-12 col-lg-4">
-            <div class="summary">
-              <h3>Cart</h3>
-              <div class="summary-item"><span class="text">Subtotal</span><span class="price" id="cart-total"></span>
+
+          
+          <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
+            <div class="box recommended">
+              <span class="recommended-badge">Plus</span>
+              <h3> <span id="product-description2">Plan 1500</span></h3>
+              <!-- <h3>Business</h3> -->
+              <h4><span id="unit-price2">1500</span></h4>
+              <h3><span id="quantity2"> 1</span> <span> person</span></h3>
+  
+              <!-- <h4><sup>$</sup>19<span> / month</span></h4> -->
+              <ul>
+                <li>National Coverage and in Bordering Countries.</li>
+                <li>Largest network of Providers.</li>
+                <li>Refractive Surgery at 50%.</li>
+                <li>Single Room in Hospitalization.</li>
+                <!-- <li class="na">Massa ultricies mi</li> -->
+              </ul>
+              <div class="btn-wrap">
+                <button id="checkout-btn2">Pay</button>
+  
+                <!-- <a href="#" class="btn-buy">Buy Now</a> -->
               </div>
-              <button class="btn btn-primary btn-lg btn-block" id="checkout-btn">Checkout</button>
             </div>
           </div>
+          <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
+            <div class="box recommended">
+              <span class="recommended-badge">Pro</span>
+              <h3> <span id="product-description3">Plan 3000</span></h3>
+              <!-- <h3>Business</h3> -->
+              <h4><span id="unit-price3">3000</span></h4>
+              <h3><span id="quantity3"> 1</span> <span> person</span></h3>
+  
+              <!-- <h4><sup>$</sup>19<span> / month</span></h4> -->
+              <ul>
+                <li>Open Plan, with Refunds.</li>
+                <li>Orthodontics up to 30 years old.</li>
+                <li>National and International Coverage.</li>
+                <li>First Level Providers throughout the Country.</li>
+                <!-- <li class="na">Massa ultricies mi</li> -->
+              </ul>
+              <div class="btn-wrap">
+                <button id="checkout-btn3">Pay</button>
+  
+                <!-- <a href="#" class="btn-buy">Buy Now</a> -->
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+    </section>
+    <div id="button-checkout" class="mercado-pago-button"></div>
+    <div id="button-checkout2" class="mercado-pago-button"></div>
+    <div id="button-checkout3" class="mercado-pago-button"></div>
+
+<br>
+
+
+
+
+
+
+
+
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>MCG<span>.</span></h3>
+              <p>
+                Superintendence of Health Services
+                Control Body of Social Works and Prepaid Medicine Entities
+                0800-222-xxxx (xxxx) |www.sssalud.gob.ar| RNEMP No. xxxx<br><br>
+              
+              
+              </p>
+             
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Clinical Center</a></li>
+            
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Specialties</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a >Cardiology</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a >Hematology </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a >Traumatology </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a >Pediatrics</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a >Dermatology</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a >Teeth Whitening</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a >Cardiovascular Surgery </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a >Gynecology </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a >Nutrition</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a >Hair Implant</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a >Endocrinology</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a >Infectology</a></li>
+              
+            </ul>
+          </div>
+                <div class="social-links mt-3 sociallink" id="icons">
+                  <h4> Social-Links</h4>
+                  <br><br>
+               
+               <a href="#" class="facebook"> <svg class="face" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
+                <a href="#" class="instagram"><svg class="insta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+                <a href="#" class="linkedin"><svg class="lin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+
+                <br><br><br>
+                <div class="email2">
+                <strong >Email:</strong> mcg@gmail.com<br>
+              </div>
+              </div>
+       
+
         </div>
       </div>
-    </section>
-    <!--payment-->
-    <section class="payment-form dark">
-      <div class="container_payment">
-        <div class="block-heading">
-          <h2>Checkout Payment</h2>
-          <p>This is an example of a Mercado Pago integration</p>
-        </div>
-        <div class="form-payment">
-          <div class="products">
-            <h2 class="title">Summary</h2>
-            <div class="item">
-              <span class="price" id="summary-price"></span>
-              <p class="item-name">Book x <span id="summary-quantity"></span></p>
-            </div>
-            <div class="total">Total<span class="price" id="summary-total"></span></div>
-          </div>
-          <div class="payment-details">
-            <div class="form-group col-sm-12">
-              <br>
-              <div id="button-checkout"></div>
-              <br>
-              <a id="go-back">
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 10 10" class="chevron-left">
-                  <path fill="#009EE3" fill-rule="nonzero" id="chevron_left"
-                    d="M7.05 1.4L6.2.552 1.756 4.997l4.449 4.448.849-.848-3.6-3.6z"></path>
-                </svg>
-                Go back to Shopping Cart
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- footer -->
-  </main>
-  <footer>
-    <div class="footer_logo">
-      <img id="horizontal_logo" alt="image of the logo" src="img/horizontal_logo.png">
     </div>
-    <div class="footer_text">
-      <p>Developers Site:</p>
-      <p><a href="https://developers.mercadopago.com" target="_blank">https://developers.mercadopago.com </a></p>
+
+    <div class="container">
+      <div class="copyright">
+       
+        &copy; Copyright <strong><span>MCG</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+     
+        Designed by <a href="https://www.linkedin.com/in/maximiliano-ruano-077759268/">Maximiliano Ruano -> Full Stack Developer</a>
+      </div>
     </div>
   </footer>
+
+
+    
+   
+
+  <!-- <div id="preloader"></div> -->
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <!-- <script src="/purecounter_vanilla.js"></script>
+   <script src="/aos.js"></script>  -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="/glightbox.min.js"></script>
+  <script src="/isotope.pkgd.min.js"></script> -->
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="/validate.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+
+
+  <!-- Template Main JS File -->
+  <!-- <script src="assets/js/main.js"></script> -->
+  <script type="text/javascript" src="js/validacion.js"></script>
+  <script type="text/javascript" src="js/ocupado.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  
+
 </body>
+
+
+
+<script>
+
+
+</script>
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          clifford: '#da373d',
+        }
+      }
+    }
+  }
+</script>
+<script>
+// function showHourOptions() {
+//   const hourOptions = [
+//     "09:00","09:30" ,"10:00","10:30", "11:00","11:30",
+//     "12:00", "13:00", "14:00",
+//     "15:00", "16:00", "17:00"
+//   ];
+
+//   const dialog = document.createElement("div");
+//   dialog.classList.add("fixed", "inset-0", "z-50", "overflow-auto", "bg-gray-500", "bg-opacity-75");
+
+//   const innerDialog = document.createElement("div");
+//   innerDialog.classList.add("relative", "mx-auto", "mt-40", "w-11/12", "max-w-lg", "bg-white", "shadow-lg", "rounded-lg", "overflow-hidden");
+
+//   const header = document.createElement("div");
+//   header.classList.add("text-lg", "font-medium", "text-gray-900", "bg-gray-200", "p-3");
+//   header.innerText = "Select Hour";
+//   header.style.backgroundColor = "orange"
+
+//   const body = document.createElement("div");
+//   body.classList.add("p-3");
+
+//   hourOptions.forEach(hour => {
+//     const option = document.createElement("button");
+//     option.classList.add("block", "w-full", "text-left", "py-2", "px-4", "text-sm", "leading-5", "text-gray-700", "hover:bg-gray-100", "focus:outline-none", "focus:bg-gray-100", "focus:border-blue-300", "transition", "duration-150", "ease-in-out");
+//     option.innerText = hour;
+//     option.onclick = () => {
+//       document.getElementById("hour").value = hour;
+//       dialog.remove();
+//     }
+//     body.appendChild(option);
+//   });
+
+//   innerDialog.appendChild(header);
+//   innerDialog.appendChild(body);
+//   dialog.appendChild(innerDialog);
+//   document.body.appendChild(dialog);
+// }
+
+// async function getOccupiedHours(selectedDate) {
+//   try {
+//     const response = await fetch(`/getOccupiedHours?date=${selectedDate}`);
+//     console.log(response);
+//     const data = await response.json();
+//     console.log(data.occupiedHours);
+//     return data.occupiedHours;
+//   } catch (error) {
+//     console.error('Error al obtener las horas ocupadas:', error.message);
+//     return [];
+//   }
+// }
+async function getOccupiedHours(selectedDate) {
+  try {
+    const response = await fetch(`/getOccupiedHours?date=${selectedDate}`);
+    const data = await response.json();
+
+    // Formatear las horas para que coincidan con el formato de hourOptions
+    const formattedOccupiedHours = data.occupiedHours.map(hour => hour.substring(0, 5));
+console.log(formattedOccupiedHours);
+    return formattedOccupiedHours;
+  } catch (error) {
+    console.error('Error al obtener las horas ocupadas:', error.message);
+    return [];
+  }
+}
+
+
+async function showHourOptions() {
+  // console.log('showHourOptions se está ejecutando');
+
+  const selectedDate = document.getElementById("time").value; // Obtener la fecha seleccionada
+  const occupiedHours = await getOccupiedHours(selectedDate); // Obtener las horas ocupadas
+
+  const dialog = document.createElement("div");
+  dialog.classList.add("fixed", "inset-0", "z-50", "overflow-auto", "bg-gray-500", "bg-opacity-75");
+
+  const innerDialog = document.createElement("div");
+  innerDialog.classList.add("relative", "mx-auto", "mt-40", "w-11/12", "max-w-lg", "bg-white", "shadow-lg", "rounded-lg", "overflow-hidden");
+
+  const header = document.createElement("div");
+  header.classList.add("text-lg", "font-medium", "text-gray-900", "bg-gray-200", "p-3");
+  header.innerText = "Select Hour";
+  header.style.backgroundColor = "orange";
+
+  const body = document.createElement("div");
+  body.classList.add("p-3");
+
+  const hourOptions = [
+    "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
+    "12:00", "13:00", "14:00",
+    "15:00", "16:00", "17:00"
+  ];
+
+  hourOptions.forEach(hour => {
+    const option = document.createElement("button");
+    option.classList.add("block", "w-full", "text-left", "py-2", "px-4", "text-sm", "leading-5", "hover:bg-gray-100", "focus:outline-none", "focus:bg-gray-100", "focus:border-blue-300", "transition", "duration-150", "ease-in-out");
+    // Verificar si la hora está ocupada y aplicar estilo correspondiente
+    console.log(hour);
+console.log(occupiedHours);
+    if (occupiedHours.includes(hour)) {
+      option.classList.add("text-red-500", "cursor-not-allowed");
+      // span.textContent = " - Ocupado";
+      option.innerText = `${hour} - Ocupado`;
+
+      option.disabled = true;
+    } else {
+      option.classList.add("text-gray-700");
+           option.innerText = hour;
+
+      option.onclick = () => {
+        document.getElementById("hour").value = hour;
+        dialog.remove();
+      };
+    }
+
+    // option.innerText = hour;
+    // option.innerText = `${hour} - Ocupado`;
+
+    body.appendChild(option);
+  });
+
+  innerDialog.appendChild(header);
+  innerDialog.appendChild(body);
+  dialog.appendChild(innerDialog);
+  document.body.appendChild(dialog);
+}
+
+</script>
+<script>
+
+
+fetch('/data')
+  .then(response => response.json())
+  .then(data => {
+    const calendario = $('#time');
+    calendario.datepicker({
+      format: 'yyyy-mm-dd',
+      autoclose: true,
+      beforeShowDay: function(date) {
+        var dayOfWeek = date.getDay();
+        console.log(dayOfWeek);
+
+        if (dayOfWeek == 0 || dayOfWeek == 6) {
+          // Deshabilitar fines de semana (domingo y sábado)
+          return {
+            enabled: false,
+            classes: 'weekend'
+          };
+        } else {
+          // Comprobar si la fecha está ocupada
+          const fechaSinZ = date.toISOString().substring(0, 10);
+          const citasEnFecha = data.filter(element => {
+            const fechaDB = element.fecha;
+            const fechaSinZDB = new Date(fechaDB).toISOString().substring(0, 10);
+            return fechaSinZ === fechaSinZDB;
+          });
+          const fechaOcupada = citasEnFecha.length > 0 && citasEnFecha.length >= 3;
+          // Devolver objeto con clases CSS
+          return {
+            enabled: true,
+            classes: fechaOcupada ? 'ocupado fecha-ocupada' : 'weekday'
+          };
+        }
+      }
+    });
+
+    const submit = document.getElementById("submit");
+    const hour = document.getElementById("hour");
+    const name = document.getElementById("name");
+    const lastName = document.getElementById("last-name");
+
+    calendario.datepicker().on('changeDate', function(e) {
+      const fechaSeleccionada = e.date.toISOString().substring(0, 10);
+      console.log(fechaSeleccionada);
+      const citasEnFecha = data.filter(element => {
+        const fechaDB = element.fecha;
+        const fechaSinZ = new Date(fechaDB).toISOString().substring(0, 10);
+        return fechaSeleccionada === fechaSinZ;
+      });
+      const fechaOcupada = citasEnFecha.length > 0 && citasEnFecha.length >= 3;
+
+      if (fechaOcupada) {
+        submit.disabled = true;
+        hour.disabled = true;
+        name.disabled = true;
+        lastName.disabled = true;
+        ocupado();
+      } else {
+        submit.disabled = false;
+        hour.disabled = false;
+        name.disabled = false;
+        lastName.disabled = false;
+      }
+    });
+  });
+
+
+</script>
+
+<script>
+  // Obtener el botón de enviar y agregar un evento clic
+  const submitButton = document.getElementById('submit');
+  submitButton.addEventListener('click', enviarDatos);
+
+  // Función para enviar los datos del formulario al servidor
+  function enviarDatos() {
+    // Obtener los datos del formulario
+    const formData = {
+      name: document.getElementById('name').value,
+      'last-name': document.getElementById('last-name').value,
+      email: document.getElementById('email').value,
+      specialty : document.getElementById('specialty').value,
+      time: document.getElementById('time').value,
+      hour: document.getElementById('hour').value,
+      // Agrega aquí el resto de los campos del formulario
+      // Por ejemplo, last-name, specialty, time, hour, etc.
+    };
+    console.log(formData);
+    // Realizar la petición AJAX usando fetch
+    fetch('/insertar', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+      
+    })
+    .then(response => {
+      if (response.ok) {
+        // Si la respuesta es exitosa, mostrar un mensaje en la página
+        const mensaje = document.createElement('p');
+        mensaje.textContent = 'Datos enviados exitosamente';
+        document.body.appendChild(mensaje);
+      } else {
+        // Manejar cualquier error si ocurre
+        console.error('Error al enviar los datos al servidor');
+      }
+    })
+    .catch(error => {
+      console.error('Error al enviar los datos al servidor', error);
+    });
+  }
+</script>
 
 </html>
